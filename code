@@ -1,0 +1,39 @@
+#include <iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+
+static const char alphanum[] =
+"0123456789"
+ "_}-][{|',.;:"
+"!@#$%^&*"
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+"abcdefghijklmnopqrstuvwxyz";
+int size = sizeof(alphanum) - 1;
+
+int main()
+{
+    //password length
+    int y;
+    cin>>y;
+    cout<<"ENTER THE LENGTH OF PASSWORD "<<y<<endl;
+    if(y<8)
+    {
+        cout<<"PASSWORD  STRENGTH : WEAK\n ";
+    }
+    else{
+        cout<<" PASSWORD STRENGTH :STRONG \n ";
+    }
+
+    int length = y;
+    cout<<" Your randomly generated password is "<<endl;
+
+    srand(time(0)); // PASSWORD GENERATION
+    for (int i = 0; i < length; i++)
+    {
+        cout<< alphanum[rand() % size];
+    }
+
+
+    return 0;
+}
