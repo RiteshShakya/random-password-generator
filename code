@@ -22,7 +22,7 @@ int main()
         cout<<"PASSWORD  STRENGTH : WEAK\n ";
     }
     else{
-        cout<<" PASSWORD STRENGTH :STRONG \n ";
+        cout<<" PASSWORD STRENGTH :STRONG \n "; //halaleyo
     }
 
     int length = y;
